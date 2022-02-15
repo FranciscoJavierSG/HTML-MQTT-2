@@ -103,10 +103,7 @@ void reconnect()
                 Serial.println("Fallo suscripción a Datco/Chile/Oficina_3/Temperatura.");
             }
 
-<<<<<<< HEAD
             /*
-=======
->>>>>>> 5410a7602edf18338c4ae542fa2d83f2d0b38200
             //Chile - Oficina 1 - Humedad
             if (mqttClient.subscribe("Datco/Chile/Oficina_1/Humedad"))
             {
@@ -136,10 +133,7 @@ void reconnect()
             {
                 Serial.println("Fallo suscripción a Datco/Chile/Oficina_3/Humedad");
             }
-<<<<<<< HEAD
             */
-=======
->>>>>>> 5410a7602edf18338c4ae542fa2d83f2d0b38200
 
             //Argentina
             //Argentina - Oficina 1 - Temperatura
@@ -172,10 +166,7 @@ void reconnect()
                 Serial.println("Fallo suscripción a Datco/Argentina/Oficina_3/Temperatura.");
             }
 
-<<<<<<< HEAD
             /*
-=======
->>>>>>> 5410a7602edf18338c4ae542fa2d83f2d0b38200
             //Argentina - Oficina 1 - Humedad
             if (mqttClient.subscribe("Datco/Argentina/Oficina_1/Humedad"))
             {
@@ -205,10 +196,7 @@ void reconnect()
             {
                 Serial.println("Fallo suscripción a Datco/Argentina/Oficina_3/Humedad");
             }
-<<<<<<< HEAD
             */
-=======
->>>>>>> 5410a7602edf18338c4ae542fa2d83f2d0b38200
         }
         else
         {
