@@ -28,7 +28,7 @@ function onConnect() {
   client.subscribe("Datco/Argentina/Oficina_1/Temperatura");
   client.subscribe("Datco/Argentina/Oficina_2/Temperatura");
   client.subscribe("Datco/Argentina/Oficina_3/Temperatura");
-  client.subscribe("Relay");
+  client.subscribe("Datco/Rele/1");
 }
 
 // Función que se llama cuando el cliente pierde la conexión
@@ -65,7 +65,7 @@ function onMessageArrived(message) {
     document.getElementById("ARG_OF3_T").textContent = message.payloadString;
     Temperatura6 = parseFloat(message.payloadString);
   }
-  if (message.destinationName == 'Relay') {
+  if (message.destinationName == 'Datco/Rele/1') {
     document.getElementById("ValorRelay").textContent = message.payloadString;
   }
 }
