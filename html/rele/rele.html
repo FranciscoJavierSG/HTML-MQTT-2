@@ -46,9 +46,12 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="http://190.110.108.59:18083/">Admin Dashboard</a>
+                        <a class="nav-link" href="http://190.110.108.59:18083/#/login">Admin Dashboard</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.grupodatco.com/">Grupo Datco</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -89,11 +92,11 @@
 
     function changeRelay() {
         if (EstadoRelay == '1') {
-            client.send('Relay', '0');
+            client.send('Datco/Rele/1', '0');
             return EstadoRelay = 0;
         }
         if (EstadoRelay == '0') {
-            client.send('Relay', '1');
+            client.send('Datco/Rele/1', '1');
             return EstadoRelay = 1;
         }
     }
