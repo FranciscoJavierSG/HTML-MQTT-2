@@ -40,9 +40,16 @@
                             </li>
                         </ul>
                     </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="rele.html">Relé</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Relé
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="chile/rele_chile.html">Chile</a></li>
+                            <li><a class="dropdown-item" href="argentina/rele_arg.html">Argentina</a>
+                            </li>
+                        </ul>
                     </li>
 
                     <li class="nav-item">
@@ -88,16 +95,82 @@
 </html>
 
 <script>
-    var EstadoRelay = '1';
+    var EstadoRele1 = '1';
+    var EstadoRele2 = '1';
+    var EstadoRele3 = '1';
+    var EstadoRele4 = '1';
+    var EstadoRele5 = '1';
+    var EstadoRele6 = '1';
 
-    function changeRelay() {
+    //Oficina 1 - Chile
+    function changeRelay1() {
         if (EstadoRelay == '1') {
-            client.send('Datco/Rele/1', '0');
-            return EstadoRelay = 0;
+            client.send('Datco/Chile/Rele/1', '0');
+            return EstadoRelay1 = 0;
         }
         if (EstadoRelay == '0') {
-            client.send('Datco/Rele/1', '1');
-            return EstadoRelay = 1;
+            client.send('Datco/Chile/Rele/1', '1');
+            return EstadoRelay1 = 1;
+        }
+    }
+
+    //Oficina 2 - Chile
+    function changeRelay2() {
+        if (EstadoRelay2 == '1') {
+            client.send('Datco/Chile/Rele/2', '0');
+            return EstadoRelay2 = 0;
+        }
+        if (EstadoRelay == '0') {
+            client.send('Datco/Chile/Rele/2', '1');
+            return EstadoRelay2 = 1;
+        }
+    }
+
+    //Oficina 3 - Chile
+    function changeRelay3() {
+        if (EstadoRelay3 == '1') {
+            client.send('Datco/Chile/Rele/3', '0');
+            return EstadoRelay3 = 0;
+        }
+        if (EstadoRelay == '0') {
+            client.send('Datco/Chile/Rele/3', '1');
+            return EstadoRelay3 = 1;
+        }
+    }
+
+    //Oficina 1 - Argentina
+    function changeRelay4() {
+        if (EstadoRelay4 == '1') {
+            client.send('Datco/Chile/Rele/3', '0');
+            return EstadoRelay4 = 0;
+        }
+        if (EstadoRelay == '0') {
+            client.send('Datco/Chile/Rele/3', '1');
+            return EstadoRelay4 = 1;
+        }
+    }
+
+    //Oficina 2 - Argentina
+    function changeRelay5() {
+        if (EstadoRelay5 == '1') {
+            client.send('Datco/Chile/Rele/3', '0');
+            return EstadoRelay5 = 0;
+        }
+        if (EstadoRelay == '0') {
+            client.send('Datco/Chile/Rele/3', '1');
+            return EstadoRelay5 = 1;
+        }
+    }
+
+    //Oficina 3 - Argentina
+    function changeRelay6() {
+        if (EstadoRelay6 == '1') {
+            client.send('Datco/Chile/Rele/3', '0');
+            return EstadoRelay6 = 0;
+        }
+        if (EstadoRelay == '0') {
+            client.send('Datco/Chile/Rele/3', '1');
+            return EstadoRelay6 = 1;
         }
     }
 </script>

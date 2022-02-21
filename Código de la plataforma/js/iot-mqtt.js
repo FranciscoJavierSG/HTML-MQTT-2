@@ -28,7 +28,15 @@ function onConnect() {
   client.subscribe("Datco/Argentina/Oficina_1/Temperatura");
   client.subscribe("Datco/Argentina/Oficina_2/Temperatura");
   client.subscribe("Datco/Argentina/Oficina_3/Temperatura");
-  client.subscribe("Datco/Rele/1");
+  client.subscribe("Datco/Chile/Oficina_1/Rele/1");
+  client.subscribe("Datco/Chile/Oficina_2/Rele/1");
+  client.subscribe("Datco/Chile/Oficina_2/Rele/2");
+  client.subscribe("Datco/Chile/Oficina_3/Rele/1");
+  client.subscribe("Datco/Argentina/Oficina_1/Rele/1");
+  client.subscribe("Datco/Argentina/Oficina_1/Rele/2");
+  client.subscribe("Datco/Argentina/Oficina_1/Rele/3");
+  client.subscribe("Datco/Argentina/Oficina_2/Rele/1");
+  client.subscribe("Datco/Argentina/Oficina_3/Rele/1");
 }
 
 // Función que se llama cuando el cliente pierde la conexión
@@ -65,7 +73,31 @@ function onMessageArrived(message) {
     document.getElementById("ARG_OF3_T").textContent = message.payloadString;
     Temperatura6 = parseFloat(message.payloadString);
   }
-  if (message.destinationName == 'Datco/Rele/1') {
-    document.getElementById("ValorRelay").textContent = message.payloadString;
+  if (message.destinationName == 'Datco/Chile/Oficina_1/Rele/1') {
+    document.getElementById("CH_OF1_RELE_1").textContent = message.payloadString;
+  }
+  if (message.destinationName == 'Datco/Chile/Oficina_2/Rele/1') {
+    document.getElementById("CH_OF2_RELE_1").textContent = message.payloadString;
+  }
+  if (message.destinationName == 'Datco/Chile/Oficina_2/Rele/2') {
+    document.getElementById("CH_OF2_RELE_2").textContent = message.payloadString;
+  }
+  if (message.destinationName == 'Datco/Chile/Oficina_3/Rele/1') {
+    document.getElementById("CH_OF3_RELE_1").textContent = message.payloadString;
+  }
+  if (message.destinationName == 'Datco/Argentina/Oficina_1/Rele/1') {
+    document.getElementById("ARG_OF1_RELE_1").textContent = message.payloadString;
+  }
+  if (message.destinationName == 'Datco/Argentina/Oficina_1/Rele/2') {
+    document.getElementById("ARG_OF1_RELE_2").textContent = message.payloadString;
+  }
+  if (message.destinationName == 'Datco/Argentina/Oficina_1/Rele/3') {
+    document.getElementById("ARG_OF1_RELE_3").textContent = message.payloadString;
+  }
+  if (message.destinationName == 'Datco/Argentina/Oficina_2/Rele/1') {
+    document.getElementById("ARG_OF2_RELE_1").textContent = message.payloadString;
+  }
+  if (message.destinationName == 'Datco/Argentina/Oficina_3/Rele/1') {
+    document.getElementById("ARG_OF3_RELE_1").textContent = message.payloadString;
   }
 }
